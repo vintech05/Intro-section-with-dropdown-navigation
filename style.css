@@ -1,0 +1,409 @@
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+    :root {
+        --Almost-White: hsl(0, 0%, 98%);
+        --Medium-Gray: hsl(0, 0%, 41%);
+        --Almost-Black: hsl(0, 0%, 8%);
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        overflow-x: hidden;
+        font-family: 'Epilogue';
+        min-height: 100vh;
+    }
+
+    nav {
+        margin-block: 1.5em;
+        margin-inline: 1em;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3em;
+    }
+
+    .hero-img img:first-child {
+        display: block;
+    }
+
+    .hero-img img:last-child {
+        display: none;
+    }
+
+    .close-icon img {
+        padding-top: .25em;
+        transform: translateX(11em);
+        width: 20%;
+        cursor: pointer;
+    }
+
+    .hamburger img{
+        display: block;
+        cursor: pointer;
+    }
+
+    nav li {
+        list-style: none;
+    }
+
+    nav li a {
+        text-decoration: none;
+        color: var(--Medium-Gray);
+    }
+
+    nav span {
+        color: var(--Medium-Gray);
+    }
+
+    .accordion-item {
+        display: none;
+        color: var(--Medium-Gray);
+        padding-left: 1em;
+        margin-top: 1em;
+        line-height: 2em;
+    }
+
+    .accordion-trigger {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 5em;
+    }
+
+    .accordion-trigger img {
+        object-fit: contain;
+        cursor: pointer;
+        padding-left: .55em;
+    }
+
+    .accordion-item.active {
+        display: block;
+    }
+
+    .accordion-item img {
+        padding-right: .75em;
+    }
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        right: 0;
+        top: 0;
+        padding-top: 1em;
+        transform: translateX(100%);
+        position: fixed;
+        background-color: white;
+        padding-inline: 3em;
+        min-height: 100vh;
+        z-index: 2;
+        transition: all 300ms ease-in-out;
+    }
+
+    .nav-item-cta {
+        display: flex;
+        gap: 1em;
+    }
+
+    .nav-cta {
+        margin-top: 1em;
+    }
+
+    .nav-cta button {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        color: var(--Medium-Gray);
+        transition: all 300ms ease-in-out;
+    }
+
+    .nav-cta button:hover {
+        color: var(--Almost-Black);
+    }
+
+    .nav-cta button:last-child:hover {
+        border: 2px solid var(--Almost-Black);
+    }
+
+    .nav-cta button:first-child {
+        background: none;
+        border: none;
+        padding-inline: 4.7em;
+        font-family: inherit;
+        margin-bottom: 1em;
+    }
+
+    .nav-cta button:last-child {
+        background: none;
+        border-radius: 1em;
+        padding-block: .75em;
+        padding-inline: 4em;
+        font-family: inherit;
+        border: 2px solid var(--Medium-Gray);
+    }
+
+    .brand-logo img, .menu-cta img {
+        width: auto;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(.25em); 
+        z-index: 1; 
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 300ms ease-in-out;
+      }
+
+      .overlay.active {
+        opacity: 1;
+      }
+      
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .hero-img img {
+        width: 100%;
+    }
+
+    .hero-title {
+        margin-top: 1.5em;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .hero-desc {
+        margin-block: 1.5em;
+        text-align: center;
+        line-height: 1.5em;
+        font-size: .85em;
+        color: var(--Medium-Gray);
+    }
+
+    .hero-cta button {
+        font-family: inherit;
+        margin-top: 2em;
+        padding-block: 1em;
+        padding-inline: 1.5em;
+        border: none;
+        background-color: var(--Almost-Black);
+        color: var(--Almost-White);
+        border-radius: 1em;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+
+    .brand {
+        display: flex;
+        gap: 1em;
+        width: 100%;
+    }
+
+    .brand img {
+        object-fit: contain;
+        margin-block: 2em;
+        margin-left: 1.2rem;
+        width: 17%;
+    }
+
+
+
+    @media screen and (min-width: 1024px) {
+
+        nav {
+            display: flex;
+            position: relative;
+        }
+
+        nav li a {
+            transition: all 200ms ease-in;
+        }
+
+        nav li a:hover {
+            color: var(--Almost-Black);
+        }
+
+        .hero-img {
+            width: 35%;
+            margin-right: .25em;
+        }
+
+        .hero-img img:first-child {
+            display: none;
+        }
+
+        .hero-img img:last-child {
+            display: block;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .content {
+            margin-right: 6em;
+        }
+
+        .hero-title {
+            font-size: 3em;
+            width: 100%;
+            text-align: unset;
+            margin-bottom: 1em;
+        }
+
+        .hero-desc {
+            text-align: unset;
+            font-size: 1em;
+        }
+
+        .hero-cta {
+            margin-top: 2em;
+        }
+
+        .hamburger, .close-icon {
+            display: none;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: row;
+            gap: 2em;
+            position: absolute;
+            min-height: auto;
+            background: none;
+            margin-top: -1.5em;
+            margin-right: 72em;
+            width: 100%;
+            align-items: center;
+        }
+
+        .brand-logo {
+            margin-left: 2em;
+        }
+
+        .nav-cta {
+            margin-left: 26em;
+            width: 100%;
+        }
+
+        .rotate {
+            margin-left: .55em;
+        }
+
+        .rotate:hover {
+            color: var(--Almost-Black);
+        }
+
+        .accordion-item {
+            gap: 1em;
+        }
+
+        .accordion-trigger:hover {
+            color: var(--Almost-Black);
+        }
+        
+        .brand {
+            padding-top: 2em;
+        }
+
+        .nav-item-cta {
+            display: flex;
+            gap: 1em;
+        }
+
+        .nav-cta button {
+            display: inline-block;
+            cursor: pointer;
+            margin-top: -3em;
+        }
+
+        .nav-cta button:first-child {
+            padding-inline: 2em;
+        }
+
+        .nav-cta button:last-child {
+            padding-inline: 1.5em;
+        }
+
+        .accordion-trigger {
+            display: flex;
+            padding-right: 0; 
+        }
+
+        .accordion-trigger img {
+            padding-left: 0;
+        }
+
+        .accordion-content {
+            margin-right: 8em;
+        }
+
+        .accordion-item {
+            margin-top: 1em;
+            padding: 1em;
+            background-color: white;
+            position: absolute;
+            border-radius: 1em;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        .hero-img {
+            width: 30%;
+        }
+
+        .nav-item {
+            margin-right: 80em;
+        }
+
+        .nav-cta {
+            margin-left: 32em;
+        }
+    }
+
+    @media screen and (min-width: 1920px) {
+        .nav-item {
+            margin-right: 110em;
+        }
+
+        .nav-cta {
+            margin-left: 65em;
+        }
+    }
+
+    @media screen and (min-width: 2560px) {
+        .hero-img {
+            width: 20%;
+        }
+
+        .nav-item {
+            margin-right: 150em;
+        }
+
+        .nav-cta {
+            margin-left: 105em;
+        }
+    }
+
+

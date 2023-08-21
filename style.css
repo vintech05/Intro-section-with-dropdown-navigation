@@ -47,6 +47,14 @@
         cursor: pointer;
     }
 
+    nav ul li {
+        margin-block: .75em;
+    }
+
+    .about {
+        margin-top: 1.5em;
+    }
+
     nav li {
         list-style: none;
     }
@@ -64,7 +72,6 @@
         display: none;
         color: var(--Medium-Gray);
         padding-left: 1em;
-        margin-top: 1em;
         line-height: 2em;
     }
 
@@ -231,6 +238,16 @@
             position: relative;
         }
 
+        nav ul {
+            display: flex;
+            gap: 2em;
+        }
+
+        .about {
+            margin-top: .75em;
+            padding-left: .75em;
+        }
+
         nav li a {
             transition: all 200ms ease-in;
         }
@@ -354,8 +371,13 @@
             padding-left: 0;
         }
 
-        .accordion-content {
+        .accordion-content-feature {
+            margin-top: -1em;
             margin-right: 8em;
+        }
+
+        .accordion-content-company {
+            margin-top: -1em;
         }
 
         .accordion-item {

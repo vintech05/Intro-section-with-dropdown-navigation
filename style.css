@@ -243,6 +243,7 @@
         nav {
             display: flex;
             position: relative;
+            margin-bottom: 1em;
         }
 
         nav ul {

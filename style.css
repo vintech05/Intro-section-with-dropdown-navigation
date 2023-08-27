@@ -252,8 +252,9 @@
         }
 
         .about {
-            margin-top: .75em;
-            padding-left: .75em;
+            position: absolute;
+            margin-top: .80em;
+            margin-left: 25em;
         }
 
         nav li a {

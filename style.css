@@ -76,6 +76,7 @@
     }
 
     .accordion-trigger {
+        padding-bottom: 1em;
         display: flex;
         flex-direction: row-reverse;
         padding-right: 5em;
